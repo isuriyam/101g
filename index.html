@@ -147,14 +147,22 @@
             <dd><span data-count="98">98</span>%</dd>
           </div>
         </dl>
+        <p class="hero-hint" aria-hidden="true"><span class="hint-dot"></span>Scroll or tap to send a signal</p>
       </div>
     </section>
 
+    <!-- ===================== TRUNK =====================
+         Everything below the hero sits on one "backbone" line.
+         As you scroll, light travels down .spine-fill and each section's .node lights up. -->
+    <div class="trunk">
+      <div class="spine" aria-hidden="true"><div class="spine-fill"><span class="spine-head"></span></div></div>
+
     <!-- ===================== ABOUT ===================== -->
     <section class="section" id="about" aria-labelledby="about-title">
+      <span class="node" aria-hidden="true"></span>
       <div class="container about-grid">
         <div class="reveal">
-          <p class="eyebrow eyebrow-dark">About 101G</p>
+          <p class="eyebrow eyebrow-dark"><span class="idx">01</span> About 101G</p>
           <h2 id="about-title">A trusted technology partner for more than two decades.</h2>
         </div>
         <div class="about-copy reveal">
@@ -170,25 +178,35 @@
 
     <!-- ===================== BUSINESS UNITS ===================== -->
     <section class="section section-alt" id="units" aria-labelledby="units-title">
+      <span class="node" aria-hidden="true"></span>
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow eyebrow-dark">Business units</p>
+          <p class="eyebrow eyebrow-dark"><span class="idx">02</span> Business units</p>
           <h2 id="units-title">Nine specialist units. One accountable partner.</h2>
-          <p>Select a unit to see its full range of solutions.</p>
+          <p>Scroll through the network. Select a unit to see its full range of solutions.</p>
         </div>
 
-        <!-- Each card is a <button> that opens the matching <dialog> below (data-open="bu-1" opens id="bu-1") -->
-        <ul class="unit-grid" role="list">
-          <li class="reveal"><button class="unit-card" data-open="bu-1"><span class="unit-num">BU 01</span><svg class="unit-icon" aria-hidden="true"><use href="#i-bank"/></svg><span class="unit-title">Banking &amp; Financial Solutions</span><span class="unit-sum">Risk consulting, credit scoring and core banking software.</span><span class="unit-more">View solutions <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
-          <li class="reveal"><button class="unit-card" data-open="bu-2"><span class="unit-num">BU 02</span><svg class="unit-icon" aria-hidden="true"><use href="#i-network"/></svg><span class="unit-title">Telecommunication Networking</span><span class="unit-sum">IP communications, VoIP, signalling and carrier network services.</span><span class="unit-more">View solutions <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
-          <li class="reveal"><button class="unit-card" data-open="bu-3"><span class="unit-num">BU 03</span><svg class="unit-icon" aria-hidden="true"><use href="#i-radio"/></svg><span class="unit-title">Radio Communication</span><span class="unit-sum">TETRA digital trunked radio and mobile network systems.</span><span class="unit-more">View solutions <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
-          <li class="reveal"><button class="unit-card" data-open="bu-4"><span class="unit-num">BU 04</span><svg class="unit-icon" aria-hidden="true"><use href="#i-code"/></svg><span class="unit-title">IT Software Solutions</span><span class="unit-sum">OSS, billing, e-government applications and custom development.</span><span class="unit-more">View solutions <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
-          <li class="reveal"><button class="unit-card" data-open="bu-5"><span class="unit-num">BU 05</span><svg class="unit-icon" aria-hidden="true"><use href="#i-broadcast"/></svg><span class="unit-title">Broadcasting</span><span class="unit-sum">Digital TV systems from ingest to DVB-T2, satellite and IP delivery.</span><span class="unit-more">View solutions <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
-          <li class="reveal"><button class="unit-card" data-open="bu-6"><span class="unit-num">BU 06</span><svg class="unit-icon" aria-hidden="true"><use href="#i-plane"/></svg><span class="unit-title">Aviation Business</span><span class="unit-sum">Sole distributor of AutoGyro Cavalon, with training and services.</span><span class="unit-more">View solutions <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
-          <li class="reveal"><button class="unit-card" data-open="bu-7"><span class="unit-num">BU 07</span><svg class="unit-icon" aria-hidden="true"><use href="#i-health"/></svg><span class="unit-title">Health Care</span><span class="unit-sum">Specialist medical equipment.</span><span class="unit-more">View solutions <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
-          <li class="reveal"><button class="unit-card" data-open="bu-8"><span class="unit-num">BU 08</span><svg class="unit-icon" aria-hidden="true"><use href="#i-shield"/></svg><span class="unit-title">Security</span><span class="unit-sum">Government security systems, video analytics and cyber security.</span><span class="unit-more">View solutions <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
-          <li class="reveal"><button class="unit-card" data-open="bu-9"><span class="unit-num">BU 09</span><svg class="unit-icon" aria-hidden="true"><use href="#i-energy"/></svg><span class="unit-title">Energy</span><span class="unit-sum">Renewable energy, battery storage and EV charging.</span><span class="unit-more">View solutions <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
-        </ul>
+        <div class="units-layout">
+          <!-- Network map: JS draws a 101G hub with one spoke per unit row below.
+               The active row's spoke lights up and fires a signal. -->
+          <div class="hub-wrap" aria-hidden="true">
+            <svg class="hub-map" viewBox="-320 -320 640 640"></svg>
+          </div>
+
+          <!-- Each row is a <button> that opens the matching <dialog> below (data-open="bu-1" opens id="bu-1").
+               data-short = label shown on the network map. -->
+          <ol class="unit-list" role="list">
+            <li><button class="unit-row" data-open="bu-1" data-short="Banking" data-icon="i-bank"><span class="unit-num">BU 01</span><span class="unit-text"><span class="unit-title">Banking &amp; Financial Solutions</span><span class="unit-sum">Risk consulting, credit scoring and core banking software.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-2" data-short="Telecom" data-icon="i-network"><span class="unit-num">BU 02</span><span class="unit-text"><span class="unit-title">Telecommunication Networking</span><span class="unit-sum">IP communications, VoIP, signalling and carrier network services.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-3" data-short="Radio" data-icon="i-radio"><span class="unit-num">BU 03</span><span class="unit-text"><span class="unit-title">Radio Communication</span><span class="unit-sum">TETRA digital trunked radio and mobile network systems.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-4" data-short="Software" data-icon="i-code"><span class="unit-num">BU 04</span><span class="unit-text"><span class="unit-title">IT Software Solutions</span><span class="unit-sum">OSS, billing, e-government applications and custom development.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-5" data-short="Broadcast" data-icon="i-broadcast"><span class="unit-num">BU 05</span><span class="unit-text"><span class="unit-title">Broadcasting</span><span class="unit-sum">Digital TV systems from ingest to DVB-T2, satellite and IP delivery.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-6" data-short="Aviation" data-icon="i-plane"><span class="unit-num">BU 06</span><span class="unit-text"><span class="unit-title">Aviation Business</span><span class="unit-sum">Sole distributor of AutoGyro Cavalon, with training and services.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-7" data-short="Health" data-icon="i-health"><span class="unit-num">BU 07</span><span class="unit-text"><span class="unit-title">Health Care</span><span class="unit-sum">Specialist medical equipment.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-8" data-short="Security" data-icon="i-shield"><span class="unit-num">BU 08</span><span class="unit-text"><span class="unit-title">Security</span><span class="unit-sum">Government security systems, video analytics and cyber security.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-9" data-short="Energy" data-icon="i-energy"><span class="unit-num">BU 09</span><span class="unit-text"><span class="unit-title">Energy</span><span class="unit-sum">Renewable energy, battery storage and EV charging.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+          </ol>
+        </div>
       </div>
 
       <!-- ===== Business unit detail dialogs (edit the lists here) ===== -->
@@ -297,10 +315,11 @@
     </section>
 
     <!-- ===================== FEATURED SOLUTIONS (tabs) ===================== -->
-    <section class="section section-dark" id="solutions" aria-labelledby="solutions-title">
+    <section class="section section-dark grid-bg" id="solutions" aria-labelledby="solutions-title">
+      <span class="node" aria-hidden="true"></span>
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow">Featured solutions</p>
+          <p class="eyebrow"><span class="idx">03</span> Featured solutions</p>
           <h2 id="solutions-title">Platforms we build, supply and support.</h2>
         </div>
 
@@ -319,9 +338,38 @@
                 <p>Computer vision on existing CCTV networks turns video feeds into actionable insights, with no need for constant human monitoring. Fewer people watching screens, more proactive duty.</p>
                 <ul class="checks"><li>Perimeter intrusion detection</li><li>Vehicle monitoring</li><li>Abandoned or removed object detection</li><li>People counting &amp; loitering detection</li><li>Classification, target detection &amp; auto-tracking</li></ul>
               </div>
+              <!-- Illustration: a CCTV feed with AI detection boxes and a scan line -->
+              <svg class="illo" viewBox="0 0 480 320" role="img" aria-label="Illustration of a CCTV feed where AI marks vehicles and a person with detection boxes">
+                <rect class="illo-frame" x="1" y="1" width="478" height="318" rx="6"/>
+                <text class="illo-label" x="18" y="28">CAM 04 · VIDEO ANALYTICS</text>
+                <circle class="rec" cx="440" cy="24" r="5"/><text class="illo-label" x="404" y="28">REC</text>
+                <path class="illo-line" d="M0 120 H480"/>
+                <path class="illo-road" d="M170 320 L228 120 H252 L330 320 Z"/>
+                <path class="illo-line dashed" d="M240 125 V320"/>
+                <path class="illo-line" d="M40 320 L200 120 M440 320 L280 120"/>
+                <!-- far car -->
+                <rect class="illo-obj" x="246" y="150" width="34" height="22" rx="4"/>
+                <!-- near car -->
+                <rect class="illo-obj" x="186" y="222" width="70" height="44" rx="6"/>
+                <rect class="illo-plate" x="207" y="252" width="28" height="9" rx="1"/>
+                <!-- person -->
+                <circle class="illo-obj" cx="392" cy="176" r="7"/><rect class="illo-obj" x="384" y="185" width="16" height="34" rx="5"/>
+                <!-- detection boxes (corner brackets) -->
+                <g class="det d1"><path d="M180 216 v-8 h10 M266 208 h10 v8 M276 264 v8 h-10 M190 272 h-10 v-8"/><text x="180" y="200">VEHICLE 0.97</text></g>
+                <g class="det d2"><path d="M240 144 v-6 h8 M278 138 h8 v6 M286 172 v6 h-8 M248 178 h-8 v-6"/><text x="236" y="132">VEHICLE 0.94</text></g>
+                <g class="det d3"><path d="M376 166 v-6 h8 M400 160 h8 v6 M408 218 v6 h-8 M384 224 h-8 v-6"/><text x="350" y="152">PERSON 0.91</text></g>
+                <g class="det d4"><rect x="203" y="249" width="36" height="15" rx="2"/><text x="246" y="292">ANPR · PLATE READ</text></g>
+                <rect class="scan" x="2" y="40" width="476" height="2"/>
+              </svg>
+            </div>
+            <div class="panel-more">
               <div>
                 <h4>Traffic law enforcement (ANPR)</h4>
                 <p>Automatic number plate recognition for plate detection and tracking, lane-change detection, parking control, red-light violations and odd/even-day road rationing.</p>
+                <h4>Manufacturing quality assurance</h4>
+                <p>Cameras detect surface defects and process deviations in real time, and alert the right people on any device.</p>
+              </div>
+              <div>
                 <table class="spec">
                   <caption>System capacity</caption>
                   <thead><tr><th scope="col">Model</th><th scope="col">Cameras</th></tr></thead>
@@ -331,8 +379,6 @@
                     <tr><td>ATS 8750</td><td>750</td></tr>
                   </tbody>
                 </table>
-                <h4>Manufacturing quality assurance</h4>
-                <p>Cameras detect surface defects and process deviations in real time, and alert the right people on any device.</p>
               </div>
             </div>
           </div>
@@ -344,17 +390,88 @@
                 <p>The web browser has become the number one target for cyber attacks, and traditional defences that try to detect and block malware can’t keep up. ISLA takes a different approach: its <strong>AirGap isolation</strong> treats all web content as a potential threat and keeps it away from endpoints and the corporate network.</p>
                 <p>It can replace your existing browser, or isolate and secure individual tabs, while users keep a familiar experience.</p>
               </div>
+              <!-- Illustration: web traffic hits the air-gap; threats stop, a clean stream reaches the user -->
+              <svg class="illo" viewBox="0 0 480 320" role="img" aria-label="Illustration of web content passing through the ISLA air gap: threats are stopped and only a clean stream reaches the user's browser">
+                <rect class="illo-frame" x="1" y="1" width="478" height="318" rx="6"/>
+                <text class="illo-label" x="24" y="40">THE WEB</text>
+                <text class="illo-label" x="196" y="40">ISLA AIRGAP</text>
+                <text class="illo-label" x="360" y="40">USER</text>
+                <!-- web content blocks -->
+                <g class="web-grid">
+                  <rect x="24" y="70" width="22" height="22"/><rect x="54" y="70" width="22" height="22" class="threat"/><rect x="84" y="70" width="22" height="22"/>
+                  <rect x="24" y="100" width="22" height="22"/><rect x="54" y="100" width="22" height="22"/><rect x="84" y="100" width="22" height="22"/>
+                  <rect x="24" y="130" width="22" height="22" class="threat"/><rect x="54" y="130" width="22" height="22"/><rect x="84" y="130" width="22" height="22"/>
+                  <rect x="24" y="160" width="22" height="22"/><rect x="54" y="160" width="22" height="22"/><rect x="84" y="160" width="22" height="22" class="threat"/>
+                  <rect x="24" y="190" width="22" height="22"/><rect x="54" y="190" width="22" height="22"/><rect x="84" y="190" width="22" height="22"/>
+                  <rect x="24" y="220" width="22" height="22"/><rect x="54" y="220" width="22" height="22" class="threat"/><rect x="84" y="220" width="22" height="22"/>
+                </g>
+                <!-- packets travelling to the air gap -->
+                <g class="packets">
+                  <rect class="pkt" x="118" y="100" width="8" height="8"/>
+                  <rect class="pkt threat p2" x="118" y="140" width="8" height="8"/>
+                  <rect class="pkt p3" x="118" y="180" width="8" height="8"/>
+                  <rect class="pkt threat p4" x="118" y="220" width="8" height="8"/>
+                </g>
+                <!-- air gap -->
+                <rect class="airgap" x="186" y="60" width="110" height="200" rx="6"/>
+                <path class="illo-shield" d="M241 120 l-26 10 v20 c0 18 11 32 26 38 c15 -6 26 -20 26 -38 v-20 Z"/>
+                <path class="illo-check" d="M230 152 l8 8 l15 -16"/>
+                <text class="illo-label" x="241" y="226" text-anchor="middle">THREATS</text>
+                <text class="illo-label" x="241" y="242" text-anchor="middle">STOPPED</text>
+                <!-- clean stream -->
+                <path class="stream" d="M300 160 H346"/>
+                <!-- browser -->
+                <rect class="illo-obj" x="346" y="70" width="112" height="180" rx="6"/>
+                <path class="illo-line" d="M346 92 H458"/>
+                <circle class="illo-dot" cx="358" cy="81" r="3"/><circle class="illo-dot" cx="368" cy="81" r="3"/><circle class="illo-dot" cx="378" cy="81" r="3"/>
+                <rect class="illo-content" x="358" y="106" width="88" height="44" rx="3"/>
+                <rect class="illo-content" x="358" y="160" width="60" height="6" rx="3"/><rect class="illo-content" x="358" y="174" width="80" height="6" rx="3"/><rect class="illo-content" x="358" y="188" width="70" height="6" rx="3"/>
+                <text class="illo-label ok" x="360" y="284">SAFE SESSION ✓</text>
+              </svg>
+            </div>
+            <div class="panel-more">
               <div class="big-figures">
                 <div><span class="big">80%</span><span>of data breaches come through web browsers*</span></div>
                 <div><span class="big">90–1,800</span><span>concurrent users per appliance, so it scales to your needs</span></div>
-                <p class="fine">*Figure as cited by the vendor.</p>
               </div>
+              <p class="fine">*Figure as cited by the vendor.</p>
             </div>
           </div>
 
           <div role="tabpanel" id="panel-worldsip" aria-labelledby="tab-worldsip" class="tab-panel" hidden>
-            <h3>WorldSip communication platform</h3>
-            <p>Software and hardware for conferencing, IP switching, billing and SS7 interconnection.</p>
+            <div class="panel-grid">
+              <div>
+                <h3>WorldSip communication platform</h3>
+                <p>Software and hardware for conferencing, IP switching, billing and SS7 interconnection. One platform connects video, voice and web users to every kind of carrier network.</p>
+              </div>
+              <!-- Illustration: endpoints → softswitch → carrier networks, with signals flowing -->
+              <svg class="illo" viewBox="0 0 480 320" role="img" aria-label="Illustration of the WorldSip softswitch connecting video, voice and web endpoints to SIP, SS7 and E1/T1 networks">
+                <rect class="illo-frame" x="1" y="1" width="478" height="318" rx="6"/>
+                <text class="illo-label" x="24" y="40">ENDPOINTS</text>
+                <text class="illo-label" x="380" y="40">NETWORKS</text>
+                <g class="links">
+                  <path class="illo-line" d="M104 90 C160 90 160 160 186 160"/><path class="illo-line" d="M104 160 H186"/><path class="illo-line" d="M104 230 C160 230 160 160 186 160"/>
+                  <path class="illo-line" d="M294 160 C320 160 320 90 376 90"/><path class="illo-line" d="M294 160 H376"/><path class="illo-line" d="M294 160 C320 160 320 230 376 230"/>
+                </g>
+                <g class="links-pulse">
+                  <path class="sig s1" pathLength="1" d="M104 90 C160 90 160 160 186 160"/><path class="sig s2" pathLength="1" d="M104 160 H186"/><path class="sig s3" pathLength="1" d="M104 230 C160 230 160 160 186 160"/>
+                  <path class="sig s4" pathLength="1" d="M294 160 C320 160 320 90 376 90"/><path class="sig s5" pathLength="1" d="M294 160 H376"/><path class="sig s6" pathLength="1" d="M294 160 C320 160 320 230 376 230"/>
+                </g>
+                <g class="ends">
+                  <rect x="24" y="72" width="80" height="36" rx="4"/><text x="40" y="95">VIDEO</text>
+                  <rect x="24" y="142" width="80" height="36" rx="4"/><text x="40" y="165">VOICE</text>
+                  <rect x="24" y="212" width="80" height="36" rx="4"/><text x="40" y="235">WEB</text>
+                  <rect x="376" y="72" width="80" height="36" rx="4"/><text x="400" y="95">SIP</text>
+                  <rect x="376" y="142" width="80" height="36" rx="4"/><text x="400" y="165">SS7</text>
+                  <rect x="376" y="212" width="80" height="36" rx="4"/><text x="392" y="235">E1/T1</text>
+                </g>
+                <rect class="switch" x="186" y="118" width="108" height="84" rx="6"/>
+                <text class="illo-label strong" x="200" y="150">SOFTSWITCH</text>
+                <text class="illo-label" x="214" y="172">IPX · RRP</text>
+                <g class="leds"><rect x="204" y="184" width="10" height="4"/><rect x="218" y="184" width="10" height="4"/><rect x="232" y="184" width="10" height="4"/><rect x="246" y="184" width="10" height="4"/><rect x="260" y="184" width="10" height="4"/></g>
+                <text class="illo-label" x="150" y="290">CONFERENCING · BILLING · SS7 GATEWAYS</text>
+              </svg>
+            </div>
             <div class="spec-grid">
               <div><h4>Video conferencing (MCU)</h4><p class="mono">WSMCU 9000 · WSMCU 5000</p></div>
               <div><h4>Web conferencing</h4><p class="mono">WSWCU 5500</p><p>Over ADSL, MPLS or leased line.</p></div>
@@ -371,12 +488,29 @@
                 <h3>Your own private GSM network</h3>
                 <p>Run your own GSM network with your own SIM cards, for emergency services or secure government use, with nationwide coverage.</p>
                 <ul class="checks"><li>Private network &amp; SIM cards</li><li>Nationwide coverage area</li><li>GPS tracking &amp; real-time monitoring</li><li>PABX, switches, VoIP &amp; security network equipment</li></ul>
-              </div>
-              <div>
                 <h4>Related</h4>
                 <p>Pair with TETRA digital trunked radio (BU 03) and carrier network services (BU 02) for a complete mission-critical communications setup.</p>
                 <button class="text-link" data-open="bu-3">View Radio Communication</button>
               </div>
+              <!-- Illustration: a private cell tower with coverage waves and tracked devices -->
+              <svg class="illo" viewBox="0 0 480 320" role="img" aria-label="Illustration of a private GSM tower broadcasting coverage to tracked devices">
+                <rect class="illo-frame" x="1" y="1" width="478" height="318" rx="6"/>
+                <defs><pattern id="hex" width="28" height="24" patternUnits="userSpaceOnUse"><path class="hex" d="M7 0 h14 l7 12 l-7 12 h-14 l-7 -12 Z"/></pattern></defs>
+                <rect x="2" y="2" width="476" height="316" rx="6" fill="url(#hex)" class="hex-bg"/>
+                <text class="illo-label" x="24" y="40">PRIVATE GSM · OWN SIM</text>
+                <g class="waves"><circle cx="240" cy="150" r="40"/><circle cx="240" cy="150" r="40"/><circle cx="240" cy="150" r="40"/></g>
+                <!-- tower -->
+                <path class="tower" d="M240 136 L216 280 M240 136 L264 280 M226 222 H254 M222 248 H258 M231 190 H249 M228 222 L258 248 M252 222 L222 248 M216 280 H264"/>
+                <circle class="tower-top" cx="240" cy="132" r="6"/>
+                <!-- devices -->
+                <g class="devices">
+                  <g class="dev v1"><rect x="80" y="96" width="18" height="30" rx="3"/><text x="70" y="146">GPS ●</text></g>
+                  <g class="dev v2"><rect x="386" y="80" width="18" height="30" rx="3"/><text x="376" y="130">GPS ●</text></g>
+                  <g class="dev v3"><rect x="110" y="226" width="18" height="30" rx="3"/><text x="100" y="276">GPS ●</text></g>
+                  <g class="dev v4"><rect x="372" y="214" width="18" height="30" rx="3"/><text x="362" y="264">GPS ●</text></g>
+                </g>
+                <text class="illo-label" x="300" y="300">NATIONWIDE COVERAGE</text>
+              </svg>
             </div>
           </div>
         </div>
@@ -395,9 +529,10 @@
 
     <!-- ===================== CREDENTIALS ===================== -->
     <section class="section section-alt" id="credentials" aria-labelledby="cred-title">
+      <span class="node" aria-hidden="true"></span>
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow eyebrow-dark">Credentials</p>
+          <p class="eyebrow eyebrow-dark"><span class="idx">04</span> Credentials</p>
           <h2 id="cred-title">Licensed, established and proven.</h2>
         </div>
 
@@ -430,11 +565,21 @@
 
     <!-- ===================== OFFICES (map switcher) ===================== -->
     <section class="section" id="offices" aria-labelledby="offices-title">
+      <span class="node" aria-hidden="true"></span>
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow eyebrow-dark">Offices</p>
+          <p class="eyebrow eyebrow-dark"><span class="idx">05</span> Offices</p>
           <h2 id="offices-title">Bangkok and Jakarta.</h2>
         </div>
+
+        <!-- Link graphic: a signal travelling between the two offices -->
+        <svg class="office-link reveal" viewBox="0 0 800 90" aria-hidden="true">
+          <path class="ol-base" d="M60 60 Q400 -10 740 60"/>
+          <path class="ol-sig" pathLength="1" d="M60 60 Q400 -10 740 60"/>
+          <circle class="ol-node" cx="60" cy="60" r="7"/><circle class="ol-node" cx="740" cy="60" r="7"/>
+          <text x="60" y="86" text-anchor="middle">BANGKOK · TH</text>
+          <text x="740" y="86" text-anchor="middle">JAKARTA · ID</text>
+        </svg>
 
         <div class="offices reveal">
           <div class="office-list" role="tablist" aria-label="Offices">
@@ -460,10 +605,11 @@
     </section>
 
     <!-- ===================== CONTACT ===================== -->
-    <section class="section section-dark" id="contact" aria-labelledby="contact-title">
+    <section class="section section-dark grid-bg" id="contact" aria-labelledby="contact-title">
+      <span class="node node-end" aria-hidden="true"></span>
       <div class="container contact-grid">
         <div class="reveal">
-          <p class="eyebrow">Contact</p>
+          <p class="eyebrow"><span class="idx">06</span> Contact</p>
           <h2 id="contact-title">Let’s talk about your project.</h2>
           <p>For business inquiries, questions or recommendations, send us a message and our team will get back to you shortly.</p>
 
@@ -519,6 +665,7 @@
         </form>
       </div>
     </section>
+    </div><!-- /.trunk -->
   </main>
 
   <!-- ===================== FOOTER ===================== -->
