@@ -198,27 +198,23 @@
                 <p>Computer vision on existing CCTV networks turns video feeds into actionable insights, with no need for constant human monitoring. Fewer people watching screens, more proactive duty.</p>
                 <ul class="checks"><li>Perimeter intrusion detection</li><li>Vehicle monitoring</li><li>Abandoned or removed object detection</li><li>People counting &amp; loitering detection</li><li>Classification, target detection &amp; auto-tracking</li></ul>
               </div>
-              <!-- Illustration: a CCTV feed with AI detection boxes and a scan line -->
-              <svg class="illo" viewBox="0 0 480 320" role="img" aria-label="Illustration of a CCTV feed where AI marks vehicles and a person with detection boxes">
-                <rect class="illo-frame" x="1" y="1" width="478" height="318" rx="6"/>
+              <!-- Illustration: a real traffic photo shown as a CCTV feed, with AI detection boxes and a scan line -->
+              <svg class="illo illo-photo" viewBox="0 0 480 320" role="img" aria-label="Traffic camera view of a busy Bangkok junction where AI marks vehicles, a motorcycle and a number plate with detection boxes">
+                <defs><clipPath id="va-clip"><rect x="1" y="1" width="478" height="318" rx="6"/></clipPath>
+                  <linearGradient id="va-top" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#070b16" stop-opacity=".85"/><stop offset="1" stop-color="#070b16" stop-opacity="0"/></linearGradient></defs>
+                <g clip-path="url(#va-clip)">
+                  <image href="images/va-traffic.jpg" x="0" y="0" width="480" height="320" preserveAspectRatio="xMidYMid slice"/>
+                  <rect class="va-tint" width="480" height="320"/>
+                  <rect width="480" height="70" fill="url(#va-top)"/>
+                </g>
+                <rect class="illo-frame va-frame" x="1" y="1" width="478" height="318" rx="6"/>
                 <text class="illo-label" x="18" y="28">CAM 04 · VIDEO ANALYTICS</text>
                 <circle class="rec" cx="457" cy="24" r="5"/><text class="illo-label" x="444" y="28" text-anchor="end">REC</text>
-                <path class="illo-line" d="M0 120 H480"/>
-                <path class="illo-road" d="M170 320 L228 120 H252 L330 320 Z"/>
-                <path class="illo-line dashed" d="M240 125 V320"/>
-                <path class="illo-line" d="M40 320 L200 120 M440 320 L280 120"/>
-                <!-- far car -->
-                <rect class="illo-obj" x="246" y="150" width="34" height="22" rx="4"/>
-                <!-- near car -->
-                <rect class="illo-obj" x="186" y="222" width="70" height="44" rx="6"/>
-                <rect class="illo-plate" x="207" y="252" width="28" height="9" rx="1"/>
-                <!-- person -->
-                <circle class="illo-obj" cx="392" cy="176" r="7"/><rect class="illo-obj" x="384" y="185" width="16" height="34" rx="5"/>
                 <!-- detection boxes (corner brackets) -->
-                <g class="det d1"><path d="M180 216 v-8 h10 M266 208 h10 v8 M276 264 v8 h-10 M190 272 h-10 v-8"/><text x="180" y="200">VEHICLE 0.97</text></g>
-                <g class="det d2"><path d="M240 144 v-6 h8 M278 138 h8 v6 M286 172 v6 h-8 M248 178 h-8 v-6"/><text x="240" y="132">VEHICLE 0.94</text></g>
-                <g class="det d3"><path d="M376 166 v-6 h8 M400 160 h8 v6 M408 218 v6 h-8 M384 224 h-8 v-6"/><text x="376" y="152">PERSON 0.91</text></g>
-                <g class="det d4"><rect x="203" y="249" width="36" height="15" rx="2"/><text x="246" y="292">ANPR · PLATE READ</text></g>
+                <g class="det d1"><path d="M105 203 v-10 h10 M161 193 h10 v10 M171 287 v10 h-10 M115 297 h-10 v-10"/><text x="105" y="186">VEHICLE 0.97</text></g>
+                <g class="det d2"><path d="M330 150 v-7 h7 M371 143 h7 v7 M378 172 v7 h-7 M337 179 h-7 v-7"/><text x="330" y="136">VEHICLE 0.94</text></g>
+                <g class="det d3"><path d="M187 176 v-6 h6 M214 170 h6 v6 M220 206 v6 h-6 M193 212 h-6 v-6"/><text x="186" y="163">MOTORCYCLE 0.91</text></g>
+                <g class="det d4"><rect x="270" y="212" width="58" height="55" rx="2"/><text x="270" y="283">ANPR · PLATE READ</text></g>
                 <rect class="scan" x="2" y="40" width="476" height="2"/>
               </svg>
             </div>
@@ -251,11 +247,17 @@
                 <p>It can replace your existing browser, or isolate and secure individual tabs, while users keep a familiar experience.</p>
               </div>
               <!-- Illustration: web traffic hits the air-gap; threats stop, a clean stream reaches the user -->
-              <svg class="illo" viewBox="0 0 480 320" role="img" aria-label="Illustration of web content passing through the ISLA air gap: threats are stopped and only a clean stream reaches the user's browser">
-                <rect class="illo-frame" x="1" y="1" width="478" height="318" rx="6"/>
+              <svg class="illo illo-photo illo-isla" viewBox="0 0 480 320" role="img" aria-label="Photo of an analyst at a workstation, overlaid with a diagram of web content passing through the ISLA air gap: threats are stopped and only a clean stream reaches the user's screen">
+                <defs><clipPath id="isla-clip"><rect x="1" y="1" width="478" height="318" rx="6"/></clipPath>
+                  <linearGradient id="isla-left" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#070b16" stop-opacity=".7"/><stop offset=".62" stop-color="#070b16" stop-opacity=".35"/><stop offset="1" stop-color="#070b16" stop-opacity="0"/></linearGradient></defs>
+                <g clip-path="url(#isla-clip)">
+                  <image href="images/isla-room.jpg" x="0" y="0" width="480" height="320" preserveAspectRatio="xMidYMid slice"/>
+                  <rect width="480" height="320" fill="url(#isla-left)"/>
+                </g>
+                <rect class="illo-frame va-frame" x="1" y="1" width="478" height="318" rx="6"/>
                 <text class="illo-label" x="65" y="40" text-anchor="middle">THE WEB</text>
                 <text class="illo-label" x="225" y="40" text-anchor="middle">ISLA AIRGAP</text>
-                <text class="illo-label" x="400" y="40" text-anchor="middle">USER</text>
+                <text class="illo-label" x="392" y="40" text-anchor="middle">USER</text>
                 <!-- web content blocks -->
                 <g class="web-grid" transform="translate(0 4)">
                   <rect x="24" y="70" width="22" height="22"/><rect x="54" y="70" width="22" height="22" class="threat"/><rect x="84" y="70" width="22" height="22"/>
@@ -278,15 +280,10 @@
                 <path class="illo-check" d="M213.5 133 l8 8 l15 -16"/>
                 <text class="illo-label" x="225" y="202" text-anchor="middle">THREATS</text>
                 <text class="illo-label" x="225" y="218" text-anchor="middle">STOPPED</text>
-                <!-- clean stream -->
-                <path class="stream" d="M284 160 H344"/>
-                <!-- browser -->
-                <rect class="illo-obj" x="344" y="70" width="112" height="180" rx="4"/>
-                <path class="illo-line" d="M344 92 H456"/>
-                <circle class="illo-dot" cx="356" cy="81" r="3"/><circle class="illo-dot" cx="366" cy="81" r="3"/><circle class="illo-dot" cx="376" cy="81" r="3"/>
-                <rect class="illo-content" x="356" y="106" width="88" height="44" rx="1"/>
-                <rect class="illo-content" x="356" y="160" width="60" height="6" rx="1"/><rect class="illo-content" x="356" y="174" width="80" height="6" rx="1"/><rect class="illo-content" x="356" y="188" width="70" height="6" rx="1"/>
-                <text class="illo-label ok" x="400" y="284" text-anchor="middle">SAFE SESSION ✓</text>
+                <!-- clean stream, ending at the real monitor in the photo -->
+                <path class="stream" d="M284 160 H305"/>
+                <path class="screen-mark" d="M308 150 v-12 h14 M308 176 v12 h14"/>
+                <text class="illo-label ok" x="392" y="126" text-anchor="middle">SAFE SESSION ✓</text>
               </svg>
             </div>
             <div class="panel-more">
@@ -305,8 +302,13 @@
                 <p>Software and hardware for conferencing, IP switching, billing and SS7 interconnection. One platform connects video, voice and web users to every kind of carrier network.</p>
               </div>
               <!-- Illustration: endpoints → softswitch → carrier networks, with signals flowing -->
-              <svg class="illo" viewBox="0 0 480 320" role="img" aria-label="Illustration of the WorldSip softswitch connecting video, voice and web endpoints to SIP, SS7 and E1/T1 networks">
-                <rect class="illo-frame" x="1" y="1" width="478" height="318" rx="6"/>
+              <svg class="illo illo-photo illo-ws" viewBox="0 0 480 320" role="img" aria-label="Photo of a data centre aisle, overlaid with a diagram of the WorldSip softswitch connecting video, voice and web endpoints to SIP, SS7 and E1/T1 networks">
+                <defs><clipPath id="ws-clip"><rect x="1" y="1" width="478" height="318" rx="6"/></clipPath></defs>
+                <g clip-path="url(#ws-clip)">
+                  <image href="images/worldsip-aisle.jpg" x="0" y="0" width="480" height="320" preserveAspectRatio="xMidYMid slice"/>
+                  <rect class="ws-tint" width="480" height="320"/>
+                </g>
+                <rect class="illo-frame va-frame" x="1" y="1" width="478" height="318" rx="6"/>
                 <text class="illo-label" x="64" y="40" text-anchor="middle">ENDPOINTS</text>
                 <text class="illo-label" x="416" y="40" text-anchor="middle">NETWORKS</text>
                 <g class="links">
@@ -353,21 +355,21 @@
                 <button class="text-link" data-open="bu-3">View Radio Communication</button>
               </div>
               <!-- Illustration: a private cell tower with coverage waves and tracked devices -->
-              <svg class="illo" viewBox="0 0 480 320" role="img" aria-label="Illustration of a private GSM tower broadcasting coverage to tracked devices">
-                <rect class="illo-frame" x="1" y="1" width="478" height="318" rx="6"/>
-                <defs><pattern id="hex" width="28" height="24" patternUnits="userSpaceOnUse"><path class="hex" d="M7 0 h14 l7 12 l-7 12 h-14 l-7 -12 Z"/></pattern></defs>
-                <rect x="2" y="2" width="476" height="316" rx="6" fill="url(#hex)" class="hex-bg"/>
+              <svg class="illo illo-photo illo-gsm" viewBox="0 0 480 320" role="img" aria-label="Photo of a telecom tower at dusk, overlaid with coverage rings reaching tracked devices on a private GSM network">
+                <defs><clipPath id="gsm-clip"><rect x="1" y="1" width="478" height="318" rx="6"/></clipPath></defs>
+                <g clip-path="url(#gsm-clip)">
+                  <image href="images/gsm-tower.jpg" x="0" y="0" width="480" height="320" preserveAspectRatio="xMidYMid slice"/>
+                  <rect class="gsm-tint" width="480" height="320"/>
+                </g>
+                <rect class="illo-frame va-frame" x="1" y="1" width="478" height="318" rx="6"/>
                 <text class="illo-label" x="24" y="40">PRIVATE GSM · OWN SIM</text>
-                <g class="waves"><circle cx="240" cy="150" r="40"/><circle cx="240" cy="150" r="40"/><circle cx="240" cy="150" r="40"/></g>
-                <!-- tower -->
-                <path class="tower" d="M240 136 L216 280 M240 136 L264 280 M226 222 H254 M222 248 H258 M231 190 H249 M228 222 L258 248 M252 222 L222 248 M216 280 H264"/>
-                <circle class="tower-top" cx="240" cy="132" r="6"/>
+                <g class="waves"><circle cx="240" cy="134" r="40"/><circle cx="240" cy="134" r="40"/><circle cx="240" cy="134" r="40"/></g>
                 <!-- devices -->
                 <g class="devices">
-                  <g class="dev v1"><rect x="80" y="96" width="18" height="30" rx="3"/><text x="89" y="146" text-anchor="middle">GPS ●</text></g>
-                  <g class="dev v2"><rect x="386" y="80" width="18" height="30" rx="3"/><text x="395" y="130" text-anchor="middle">GPS ●</text></g>
-                  <g class="dev v3"><rect x="110" y="226" width="18" height="30" rx="3"/><text x="119" y="276" text-anchor="middle">GPS ●</text></g>
-                  <g class="dev v4"><rect x="372" y="214" width="18" height="30" rx="3"/><text x="381" y="264" text-anchor="middle">GPS ●</text></g>
+                  <g class="dev v1"><ellipse class="pin-ring" cx="89" cy="126" rx="8" ry="2.8"/><image href="images/gps-pin.png" x="79.5" y="98.6" width="19" height="27.4"/><text x="89" y="143" text-anchor="middle">UNIT 01</text></g>
+                  <g class="dev v2"><ellipse class="pin-ring" cx="395" cy="110" rx="8" ry="2.8"/><image href="images/gps-pin.png" x="385.5" y="82.6" width="19" height="27.4"/><text x="395" y="127" text-anchor="middle">UNIT 02</text></g>
+                  <g class="dev v3"><ellipse class="pin-ring" cx="119" cy="256" rx="8" ry="2.8"/><image href="images/gps-pin.png" x="109.5" y="228.6" width="19" height="27.4"/><text x="119" y="273" text-anchor="middle">UNIT 03</text></g>
+                  <g class="dev v4"><ellipse class="pin-ring" cx="381" cy="244" rx="8" ry="2.8"/><image href="images/gps-pin.png" x="371.5" y="216.6" width="19" height="27.4"/><text x="381" y="261" text-anchor="middle">UNIT 04</text></g>
                 </g>
                 <text class="illo-label" x="456" y="296" text-anchor="end">NATIONWIDE COVERAGE</text>
               </svg>
@@ -391,6 +393,8 @@
           <!-- Network map: JS draws a 101G hub with one spoke per unit row below.
                The active row's spoke lights up and fires a signal. -->
           <div class="hub-wrap" aria-hidden="true">
+            <!-- background graphic: the map's rings and spokes continued outward across the section -->
+            <svg class="units-bg" viewBox="-1000 -1000 2000 2000" focusable="false"><circle r="205"/><circle r="300"/><circle r="415"/><circle r="550"/><circle r="710"/><circle r="890"/><line x1="0.0" y1="-205.0" x2="0.0" y2="-1000.0"/><line x1="131.8" y1="-157.0" x2="642.8" y2="-766.0"/><line x1="201.9" y1="-35.6" x2="984.8" y2="-173.6"/><line x1="177.5" y1="102.5" x2="866.0" y2="500.0"/><line x1="70.1" y1="192.6" x2="342.0" y2="939.7"/><line x1="-70.1" y1="192.6" x2="-342.0" y2="939.7"/><line x1="-177.5" y1="102.5" x2="-866.0" y2="500.0"/><line x1="-201.9" y1="-35.6" x2="-984.8" y2="-173.6"/><line x1="-131.8" y1="-157.0" x2="-642.8" y2="-766.0"/></svg>
             <span class="ghost ghost-units">09</span>
             <svg class="hub-map" viewBox="-320 -320 640 640"></svg>
           </div>
@@ -398,15 +402,15 @@
           <!-- Each row is a <button> that opens the matching <dialog> below (data-open="bu-1" opens id="bu-1").
                data-short = label shown on the network map. -->
           <ol class="unit-list" role="list">
-            <li><button class="unit-row" data-open="bu-1" data-short="Banking" data-icon="i-bank"><span class="unit-num">BU 01</span><span class="unit-text"><span class="unit-title">Banking &amp; Financial Solutions</span><span class="unit-sum">Risk consulting, credit scoring and core banking software.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
-            <li><button class="unit-row" data-open="bu-2" data-short="Telecom" data-icon="i-network"><span class="unit-num">BU 02</span><span class="unit-text"><span class="unit-title">Telecommunication Networking</span><span class="unit-sum">IP communications, VoIP, signalling and carrier network services.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
-            <li><button class="unit-row" data-open="bu-3" data-short="Radio" data-icon="i-radio"><span class="unit-num">BU 03</span><span class="unit-text"><span class="unit-title">Radio Communication</span><span class="unit-sum">TETRA digital trunked radio and mobile network systems.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
-            <li><button class="unit-row" data-open="bu-4" data-short="Software" data-icon="i-code"><span class="unit-num">BU 04</span><span class="unit-text"><span class="unit-title">IT Software Solutions</span><span class="unit-sum">OSS, billing, e-government applications and custom development.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
-            <li><button class="unit-row" data-open="bu-5" data-short="Broadcast" data-icon="i-broadcast"><span class="unit-num">BU 05</span><span class="unit-text"><span class="unit-title">Broadcasting</span><span class="unit-sum">Digital TV systems from ingest to DVB-T2, satellite and IP delivery.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
-            <li><button class="unit-row" data-open="bu-6" data-short="Aviation" data-icon="i-plane"><span class="unit-num">BU 06</span><span class="unit-text"><span class="unit-title">Aviation Business</span><span class="unit-sum">Sole distributor of AutoGyro Cavalon, with training and services.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
-            <li><button class="unit-row" data-open="bu-7" data-short="Health" data-icon="i-health"><span class="unit-num">BU 07</span><span class="unit-text"><span class="unit-title">Health Care</span><span class="unit-sum">Specialist medical equipment.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
-            <li><button class="unit-row" data-open="bu-8" data-short="Security" data-icon="i-shield"><span class="unit-num">BU 08</span><span class="unit-text"><span class="unit-title">Security</span><span class="unit-sum">Government security systems, video analytics and cyber security.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
-            <li><button class="unit-row" data-open="bu-9" data-short="Energy" data-icon="i-energy"><span class="unit-num">BU 09</span><span class="unit-text"><span class="unit-title">Energy</span><span class="unit-sum">Renewable energy, battery storage and EV charging.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-1" data-short="Banking" data-icon="i-bank"><span class="unit-num">01</span><span class="unit-text"><span class="unit-title">Banking &amp; Financial Solutions</span><span class="unit-sum">Risk consulting, credit scoring and core banking software.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-2" data-short="Telecom" data-icon="i-network"><span class="unit-num">02</span><span class="unit-text"><span class="unit-title">Telecommunication Networking</span><span class="unit-sum">IP communications, VoIP, signalling and carrier network services.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-3" data-short="Radio" data-icon="i-radio"><span class="unit-num">03</span><span class="unit-text"><span class="unit-title">Radio Communication</span><span class="unit-sum">TETRA digital trunked radio and mobile network systems.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-4" data-short="Software" data-icon="i-code"><span class="unit-num">04</span><span class="unit-text"><span class="unit-title">IT Software Solutions</span><span class="unit-sum">OSS, billing, e-government applications and custom development.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-5" data-short="Broadcast" data-icon="i-broadcast"><span class="unit-num">05</span><span class="unit-text"><span class="unit-title">Broadcasting</span><span class="unit-sum">Digital TV systems from ingest to DVB-T2, satellite and IP delivery.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-6" data-short="Aviation" data-icon="i-plane"><span class="unit-num">06</span><span class="unit-text"><span class="unit-title">Aviation Business</span><span class="unit-sum">Sole distributor of AutoGyro Cavalon, with training and services.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-7" data-short="Health" data-icon="i-health"><span class="unit-num">07</span><span class="unit-text"><span class="unit-title">Health Care</span><span class="unit-sum">Specialist medical equipment.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-8" data-short="Security" data-icon="i-shield"><span class="unit-num">08</span><span class="unit-text"><span class="unit-title">Security</span><span class="unit-sum">Government security systems, video analytics and cyber security.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
+            <li><button class="unit-row" data-open="bu-9" data-short="Energy" data-icon="i-energy"><span class="unit-num">09</span><span class="unit-text"><span class="unit-title">Energy</span><span class="unit-sum">Renewable energy, battery storage and EV charging.</span></span><svg class="icon unit-go" aria-hidden="true"><use href="#i-arrow"/></svg></button></li>
           </ol>
         </div>
       </div>
@@ -553,34 +557,36 @@
         <div class="cred-cols">
           <div class="reveal">
             <h3 class="cred-kicker">Licences</h3>
-            <ol class="permits">
-              <li class="permit">
-                <span class="permit-stub" aria-hidden="true"><span>Licence 01</span></span>
-                <div class="permit-body">
-                  <p class="permit-issuer">Issued by NBTC · Thailand <span class="permit-tag">Type 1</span></p>
-                  <h4>NBTC Internet Service License</h4>
-                  <p>Issued by Thailand’s National Broadcasting and Telecommunications Commission.</p>
-                </div>
-                <svg class="permit-seal" viewBox="0 0 120 120" aria-hidden="true">
-                  <defs><path id="seal-arc-01" d="M60 60 m-43 0 a43 43 0 1 1 86 0 a43 43 0 1 1 -86 0"/></defs>
-                  <circle class="seal-ring" cx="60" cy="60" r="57"/><circle class="seal-ring seal-dash" cx="60" cy="60" r="52"/><circle class="seal-ring" cx="60" cy="60" r="30"/>
-                  <text><textPath href="#seal-arc-01" textLength="262">NBTC · LICENSED · THAILAND · NBTC · LICENSED ·</textPath></text>
-                  <path class="seal-check" d="M47 61l9 9 17-20"/>
-                </svg>
+            <ol class="certs">
+              <li class="cert">
+                <figure>
+                  <span class="cert-frame">
+                    <picture>
+                      <source srcset="images/licence-internet.avif" type="image/avif">
+                      <img src="images/licence-internet.jpg" width="428" height="606" loading="lazy" decoding="async" alt="Certificate of the NBTC Internet Service License Type 1 issued to 101 Global Company Limited">
+                    </picture>
+                  </span>
+                  <figcaption>
+                    <p class="cert-issuer">Licence 01 · NBTC</p>
+                    <h4>Internet Service License <span class="cert-tag">Type 1</span></h4>
+                    <p class="cert-no">No. NTC/<wbr>MM/<wbr>INT/<wbr>ISP/<wbr>I/<wbr>012/<wbr>2548</p>
+                  </figcaption>
+                </figure>
               </li>
-              <li class="permit">
-                <span class="permit-stub" aria-hidden="true"><span>Licence 02</span></span>
-                <div class="permit-body">
-                  <p class="permit-issuer">Issued by NBTC · Thailand</p>
-                  <h4>NBTC Telecommunication Service License</h4>
-                  <p>Licensed to provide telecommunication services in Thailand.</p>
-                </div>
-                <svg class="permit-seal" viewBox="0 0 120 120" aria-hidden="true">
-                  <defs><path id="seal-arc-02" d="M60 60 m-43 0 a43 43 0 1 1 86 0 a43 43 0 1 1 -86 0"/></defs>
-                  <circle class="seal-ring" cx="60" cy="60" r="57"/><circle class="seal-ring seal-dash" cx="60" cy="60" r="52"/><circle class="seal-ring" cx="60" cy="60" r="30"/>
-                  <text><textPath href="#seal-arc-02" textLength="262">NBTC · LICENSED · THAILAND · NBTC · LICENSED ·</textPath></text>
-                  <path class="seal-check" d="M47 61l9 9 17-20"/>
-                </svg>
+              <li class="cert">
+                <figure>
+                  <span class="cert-frame">
+                    <picture>
+                      <source srcset="images/licence-telecom.avif" type="image/avif">
+                      <img src="images/licence-telecom.jpg" width="432" height="606" loading="lazy" decoding="async" alt="Certificate of the NBTC Telecommunication Service License issued to 101 Global Company Limited">
+                    </picture>
+                  </span>
+                  <figcaption>
+                    <p class="cert-issuer">Licence 02 · NBTC</p>
+                    <h4>Telecommunication Service License <span class="cert-tag">Type 1</span></h4>
+                    <p class="cert-no">No. 1/50/004</p>
+                  </figcaption>
+                </figure>
               </li>
             </ol>
           </div>
