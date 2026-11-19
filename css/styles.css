@@ -756,7 +756,7 @@ figcaption { font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; 
   .contact-rows > div { grid-template-columns: 6rem 1fr; }
   .vision p { padding-right: 0; padding-top: 1.6em; }
   .vision-mark { font-size: 6rem; right: auto; left: -.04em; top: .05em; }
-  .unit-row { grid-template-columns: 2.5rem 1fr auto; gap: 12px; padding: 20px 4px; }
+  .unit-row { grid-template-columns: 2.5rem 1fr auto; gap: 12px; padding: 20px 6px 20px 18px; } /* left room so the active row's amber bar doesn't crowd the numeral */
   /* all four solution tabs visible at once in a 2 x 2 grid: no sideways swiping */
   .tab-list { display: grid; grid-template-columns: 1fr 1fr; overflow: visible; border-bottom: 0; }
   .tab-list [role="tab"] { padding: 0 8px; min-height: 50px; margin-bottom: 0; text-align: center; border-bottom: 2px solid var(--ink-line); }
