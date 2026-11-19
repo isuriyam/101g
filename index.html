@@ -116,6 +116,8 @@
 
     <!-- ===================== HERO ===================== -->
     <section class="hero" aria-labelledby="hero-title">
+      <!-- Background photo (decorative, so alt=""). fetchpriority="high" = load it first, it's the biggest thing on screen -->
+      <img class="hero-bg" src="images/hero.webp" width="1600" height="900" alt="" fetchpriority="high" decoding="async">
       <canvas class="hero-canvas" aria-hidden="true"></canvas>
       <div class="container hero-inner">
         <p class="eyebrow">IT &amp; Telecommunications · Since 1999</p>
@@ -164,6 +166,10 @@
         <div class="reveal">
           <p class="eyebrow eyebrow-dark"><span class="idx">01</span> About 101G</p>
           <h2 id="about-title">A trusted technology partner for more than two decades.</h2>
+          <figure class="about-figure">
+            <img src="images/about.webp" width="1280" height="720" alt="Technology professionals discussing a network deployment in a Bangkok office" loading="lazy" decoding="async">
+            <figcaption>Illustrative image</figcaption>
+          </figure>
         </div>
         <div class="about-copy reveal">
           <p><strong>101 Global Company Limited (101G)</strong> is an information technology and telecommunications company established in 1999, with registered capital of 120 million baht.</p>
@@ -212,6 +218,7 @@
       <!-- ===== Business unit detail dialogs (edit the lists here) ===== -->
       <dialog class="unit-dialog" id="bu-1" aria-labelledby="bu-1-title">
         <div class="dialog-head"><span class="unit-num">BU 01</span><h3 id="bu-1-title">Banking &amp; Financial Solutions</h3><button class="dialog-close" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+        <img class="dialog-media" src="images/bu-1.webp" width="1280" height="720" alt="Analyst at a workstation inside a bank data centre" loading="lazy" decoding="async">
         <div class="dialog-body">
           <p>Analytic platforms, consulting and software that support risk managers with custom scorecard models, data attribute sets and complex risk strategies.</p>
           <div class="cols">
@@ -225,6 +232,7 @@
 
       <dialog class="unit-dialog" id="bu-2" aria-labelledby="bu-2-title">
         <div class="dialog-head"><span class="unit-num">BU 02</span><h3 id="bu-2-title">Telecommunication Networking</h3><button class="dialog-close" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+        <img class="dialog-media" src="images/bu-2.webp" width="1280" height="720" alt="Telecommunications tower against the Bangkok skyline" loading="lazy" decoding="async">
         <div class="dialog-body">
           <div class="cols">
             <div><h4>IP communications</h4><ul><li>NGN (Next Generation Network)</li><li>SBC (Session Border Controller)</li><li>IP softswitches, VoIP specialist &amp; consulting services</li><li>IP-PBX, IP phones, video phones &amp; soft phones</li><li>Call centre solutions &amp; CRM</li><li>Paperless “green fax” systems</li></ul></div>
@@ -237,6 +245,7 @@
 
       <dialog class="unit-dialog" id="bu-3" aria-labelledby="bu-3-title">
         <div class="dialog-head"><span class="unit-num">BU 03</span><h3 id="bu-3-title">Radio Communication</h3><button class="dialog-close" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+        <img class="dialog-media" src="images/bu-3.webp" width="1280" height="720" alt="Two handheld digital radios on a charging dock" loading="lazy" decoding="async">
         <div class="dialog-body">
           <p>TETRA is the digital trunked mobile radio standard built for professional users who need reliable, mission-critical communication.</p>
           <div class="cols">
@@ -249,6 +258,7 @@
 
       <dialog class="unit-dialog" id="bu-4" aria-labelledby="bu-4-title">
         <div class="dialog-head"><span class="unit-num">BU 04</span><h3 id="bu-4-title">IT Software Solutions</h3><button class="dialog-close" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+        <img class="dialog-media" src="images/bu-4.webp" width="1280" height="720" alt="Enterprise server racks with blue network cables" loading="lazy" decoding="async">
         <div class="dialog-body">
           <div class="cols">
             <div><h4>Network &amp; operations</h4><ul><li>OSS: network infrastructure &amp; inventory management, with workflow and real-time asset value</li><li>Supports IP, MPLS, SDH, SONET, PDH, WDM, fibre, Ethernet, NGN, mobile, radio and more</li><li>Order management &amp; package offering</li><li>Billing for VoIP, calling cards, service &amp; content providers and network operators</li></ul></div>
@@ -261,6 +271,7 @@
 
       <dialog class="unit-dialog" id="bu-5" aria-labelledby="bu-5-title">
         <div class="dialog-head"><span class="unit-num">BU 05</span><h3 id="bu-5-title">Broadcasting</h3><button class="dialog-close" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+        <img class="dialog-media" src="images/bu-5.webp" width="1280" height="720" alt="Broadcast control desk facing a wall of television monitors" loading="lazy" decoding="async">
         <div class="dialog-body">
           <p>Broadcasting systems and digital TV equipment covering the full chain, from capture to delivery.</p>
           <ol class="flow">
@@ -273,6 +284,7 @@
 
       <dialog class="unit-dialog" id="bu-6" aria-labelledby="bu-6-title">
         <div class="dialog-head"><span class="unit-num">BU 06</span><h3 id="bu-6-title">Aviation Business</h3><button class="dialog-close" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+        <figure class="dialog-figure"><img class="dialog-media" src="images/bu-6.webp" width="1280" height="720" alt="Enclosed gyroplane flying above hills and farmland" loading="lazy" decoding="async"><figcaption>Illustrative image</figcaption></figure>
         <div class="dialog-body">
           <p>101G is the <strong>sole distributor of AutoGyro GmbH’s Cavalon</strong>. AutoGyro stands for innovative design, the highest quality and global projects.</p>
           <div class="cols">
@@ -284,6 +296,7 @@
 
       <dialog class="unit-dialog" id="bu-7" aria-labelledby="bu-7-title">
         <div class="dialog-head"><span class="unit-num">BU 07</span><h3 id="bu-7-title">Health Care</h3><button class="dialog-close" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+        <img class="dialog-media" src="images/bu-7.webp" width="1280" height="720" alt="Clinician beside specialist medical equipment" loading="lazy" decoding="async">
         <div class="dialog-body">
           <div class="cols">
             <div><h4>Medical equipment</h4><ul><li>Airnergy Medical Plus</li><li>Far-infrared sauna</li><li>Ozone machine</li><li>PEMF iMRS</li></ul></div>
@@ -293,6 +306,7 @@
 
       <dialog class="unit-dialog" id="bu-8" aria-labelledby="bu-8-title">
         <div class="dialog-head"><span class="unit-num">BU 08</span><h3 id="bu-8-title">Security</h3><button class="dialog-close" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+        <img class="dialog-media" src="images/bu-8.webp" width="1280" height="720" alt="Operators watching transit camera feeds in a security operations room" loading="lazy" decoding="async">
         <div class="dialog-body">
           <div class="cols">
             <div><h4>Military &amp; government</h4><ul><li>Lawful interception</li><li>Phone jammers</li><li>Shoe &amp; leg scanners</li><li>Through-wall detection systems</li><li>X-ray inspection: people, mail, baggage, vehicles &amp; cargo</li></ul></div>
@@ -305,6 +319,7 @@
 
       <dialog class="unit-dialog" id="bu-9" aria-labelledby="bu-9-title">
         <div class="dialog-head"><span class="unit-num">BU 09</span><h3 id="bu-9-title">Energy</h3><button class="dialog-close" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+        <img class="dialog-media" src="images/bu-9.webp" width="1280" height="720" alt="Rows of solar panels with a battery storage enclosure" loading="lazy" decoding="async">
         <div class="dialog-body">
           <div class="cols">
             <div><h4>Renewable energy</h4><ul><li>Wind energy solutions</li><li>Solar energy solutions</li><li>Geothermal solutions</li></ul></div>

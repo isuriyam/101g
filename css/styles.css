@@ -139,6 +139,17 @@ ul { padding-left: 1.1em; }
   background: radial-gradient(1100px 600px at 85% -10%, #142a5e 0%, transparent 60%), var(--ink);
   color: #fff; padding: calc(var(--header-h) + 56px) 0 28px;
 }
+.hero-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%; z-index: -3;
+  object-fit: cover; object-position: 75% center; /* keep the monitors on the right in view */
+  opacity: .9;
+}
+.hero::before { /* dark fade on the left so the headline stays readable */
+  content: ""; position: absolute; inset: 0; z-index: -2;
+  background:
+    linear-gradient(90deg, rgb(7 11 22 / 92%) 0%, rgb(7 11 22 / 70%) 45%, rgb(7 11 22 / 25%) 100%),
+    linear-gradient(0deg, rgb(7 11 22 / 85%) 0%, transparent 40%);
+}
 .hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; touch-action: pan-y; }
 .hero-inner { max-width: 900px; margin-left: max(16px, calc((100% - var(--container)) / 2)); pointer-events: none; }
 .hero-inner a { pointer-events: auto; }
@@ -229,6 +240,16 @@ ul { padding-left: 1.1em; }
 .about-grid { display: grid; gap: 24px; }
 .about-copy p { color: var(--muted); font-size: 1.08rem; }
 .about-copy strong { color: var(--text); font-weight: 600; }
+.about-figure { margin: 28px 0 0; position: relative; }
+.about-figure img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius); }
+.about-figure::before { /* amber corner tick, ties the photo to the signal theme */
+  content: ""; position: absolute; left: -1px; top: -1px; width: 40px; height: 40px;
+  border-left: 3px solid var(--signal); border-top: 3px solid var(--signal); border-top-left-radius: var(--radius);
+}
+figcaption { font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+.dialog-media { width: 100%; height: auto; aspect-ratio: 21 / 9; object-fit: cover; }
+.dialog-figure { margin: 0; position: relative; }
+.dialog-figure figcaption { position: absolute; right: 10px; bottom: 8px; margin: 0; color: #fff; background: rgb(0 0 0 / 55%); padding: 2px 8px; border-radius: 3px; }
 .vision { margin: 28px 0 0; padding: 4px 0 4px 22px; border-left: 2px solid var(--signal); }
 .vision p { font-size: 1.3rem; line-height: 1.4; color: var(--text); font-weight: 500; letter-spacing: -0.01em; margin-bottom: .5em; }
 .vision footer { font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
