@@ -25,14 +25,20 @@
   --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
 
   --radius: 2px;           /* near-square corners: engineered, not bubbly */
-  --container: 1180px;
+  --container: 73.75rem;   /* 1180px at the base size; grows with the root font on big screens */
+  --sec-pad: 72px;         /* vertical padding of each section (bigger on larger screens, set below) */
   --header-h: 68px;
   --spine-x: 12px;         /* where the backbone line sits (set again for wide screens below) */
 }
 
 /* ---------- 2. Reset & base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); }
+html {
+  scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px);
+  /* 16px up to ~1540px wide, then everything (type, container, rem spacing) scales up: ~18px at 1920, ~21px at 2560 */
+  font-size: clamp(100%, 0.5rem + 0.52vw, 143.75%);
+  -webkit-text-size-adjust: 100%; text-size-adjust: 100%;
+}
 body {
   margin: 0;
   font-family: var(--font);
@@ -163,7 +169,7 @@ ul { padding-left: 1.1em; }
 .hero-foot { margin-top: auto; }
 .hero h1 {
   font-family: "Anton", Impact, "Arial Narrow Bold", sans-serif; font-weight: 400; text-transform: uppercase;
-  font-size: clamp(3.3rem, min(13.4vw, 19.5svh), 15rem); line-height: .92; letter-spacing: 0;
+  font-size: clamp(2.5rem, min(13.4vw, 19.5svh), 15rem); line-height: .92; letter-spacing: 0;
   margin: 0 0 .22em -.03em; text-wrap: nowrap;
 }
 .hero h1 .line { display: block; overflow: hidden; padding-top: .04em; }
@@ -195,11 +201,11 @@ ul { padding-left: 1.1em; }
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 64px 0 0;
   border-top: 1px solid rgb(255 255 255 / 18%);
 }
-.stat { padding: 22px 20px 6px 0; }
-.stat + .stat { border-left: 1px solid rgb(255 255 255 / 12%); padding-left: 20px; }
+.stat { padding: 22px 12px 6px 0; display: flex; flex-direction: column; justify-content: space-between; gap: 8px; }
+.stat + .stat { border-left: 1px solid rgb(255 255 255 / 12%); padding-left: 14px; }
 @media (min-width: 900px) { .stat { padding: 28px 40px 8px 0; } .stat + .stat { padding-left: 40px; } }
 .stat dt { font-family: var(--mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted-dark); }
-.stat dd { margin: 8px 0 0; font-size: clamp(2.6rem, 6vw, 4.6rem); font-weight: 300; line-height: 1; letter-spacing: -0.05em; font-variant-numeric: tabular-nums; }
+.stat dd { margin: 0; font-size: clamp(2.6rem, 6vw, 4.6rem); font-weight: 300; line-height: 1; letter-spacing: -0.05em; font-variant-numeric: tabular-nums; }
 .stat .unit { font-size: .42em; font-weight: 400; letter-spacing: 0; color: var(--signal); vertical-align: .95em; margin: 0 .08em; }
 .hero-hint {
   display: flex; align-items: center; gap: 10px; margin: 22px 0 0;
@@ -233,7 +239,7 @@ ul { padding-left: 1.1em; }
   background: #fff; box-shadow: 0 0 0 4px rgb(255 181 71 / 35%), 0 0 22px 6px var(--signal);
 }
 .node {
-  position: absolute; left: calc(var(--spine-x) + 1px); top: 76px; z-index: 6;
+  position: absolute; left: calc(var(--spine-x) + 1px); top: calc(var(--sec-pad) + 4px); z-index: 6;
   width: 13px; height: 13px; margin-left: -6.5px; border-radius: 50%;
   background: var(--paper); border: 2px solid var(--line);
   transition: border-color .3s, background .3s, box-shadow .3s;
@@ -250,7 +256,7 @@ ul { padding-left: 1.1em; }
 .trunk .container { padding-left: 22px; }
 
 /* ---------- 7. Sections ---------- */
-.section { position: relative; padding: 72px 0; }
+.section { position: relative; padding: var(--sec-pad) 0; }
 .section-tight { padding: 32px 0; }
 .section-alt { background: var(--paper-2); }
 .section-dark { background: var(--ink); color: #fff; }
@@ -438,8 +444,8 @@ figcaption { font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; 
 .pkt { fill: var(--cyan); animation: pkt 2.4s linear infinite; }
 .pkt.threat { fill: #ff5a5a; animation-name: pkt-stop; }
 .pkt.p2 { animation-delay: .6s; } .pkt.p3 { animation-delay: 1.2s; } .pkt.p4 { animation-delay: 1.8s; }
-@keyframes pkt { from { transform: translateX(0); opacity: 0; } 10% { opacity: 1; } 80% { opacity: 1; } to { transform: translateX(62px); opacity: 0; } }
-@keyframes pkt-stop { from { transform: translateX(0); opacity: 0; } 10% { opacity: 1; } 70% { transform: translateX(56px); opacity: 1; } to { transform: translateX(56px); opacity: 0; } }
+@keyframes pkt { from { transform: translateX(8px); opacity: 0; } 10% { opacity: 1; } 80% { opacity: 1; } to { transform: translateX(72px); opacity: 0; } }
+@keyframes pkt-stop { from { transform: translateX(8px); opacity: 0; } 10% { opacity: 1; } 70% { transform: translateX(56px); opacity: 1; } to { transform: translateX(56px); opacity: 0; } }
 .airgap { fill: rgb(95 212 255 / 5%); stroke: var(--cyan); stroke-width: 1.5; stroke-dasharray: 6 6; animation: dash 1.5s linear infinite; }
 @keyframes dash { to { stroke-dashoffset: -24; } }
 .illo-shield { fill: rgb(255 181 71 / 12%); stroke: var(--signal); stroke-width: 2; stroke-linejoin: round; }
@@ -483,7 +489,8 @@ figcaption { font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; 
     linear-gradient(90deg, rgb(29 91 255 / 6%) 1px, transparent 1px) 0 0 / 24px 24px,
     var(--paper);
   box-shadow: inset 0 0 0 1px var(--text);
-  clip-path: polygon(0 0, 46% 0, calc(46% + 24px) var(--tab), 100% var(--tab), 100% 100%, 0 100%);
+  --tabw: max(46%, 13.5rem);
+  clip-path: polygon(0 0, var(--tabw) 0, calc(var(--tabw) + 24px) var(--tab), 100% var(--tab), 100% 100%, 0 100%);
   filter: drop-shadow(0 10px 18px rgb(17 24 39 / 8%));
 }
 .dossier-tab {
@@ -583,9 +590,9 @@ figcaption { font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; 
   right: -0.04em; top: .35em; font-size: clamp(6rem, 17vw, 17rem);
   color: transparent; -webkit-text-stroke: 1px rgb(95 212 255 / 16%);
 }
-.hub-wrap { isolation: isolate; }
+.hub-wrap { isolation: isolate; position: relative; }
 .ghost-units {
-  left: 50%; top: 50%; translate: -50% -46%; font-size: clamp(12rem, 34vw, 30rem);
+  left: 50%; top: 50%; translate: -50% -46%; font-size: clamp(9rem, 34vw, 30rem);
   color: rgb(29 91 255 / 6%); letter-spacing: -0.08em;
 }
 .ghost-cred { right: -0.05em; top: .3em; font-size: clamp(7rem, 22vw, 21rem); color: rgb(29 91 255 / 6%); }
@@ -676,8 +683,7 @@ figcaption { font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; 
   .site-nav .btn { margin: 0 0 0 10px; width: auto; }
 
   .hero { padding-top: calc(var(--header-h) + 56px); padding-bottom: 40px; }
-  .section { padding: 112px 0; }
-  .node { top: 116px; }
+  :root { --sec-pad: clamp(112px, 7.4vw, 200px); }
   .about-grid { grid-template-columns: 5fr 6fr; gap: 64px; }
   .units-layout { grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
   .hub-wrap { position: sticky; top: calc(var(--header-h) + 40px); max-width: none; }
@@ -694,6 +700,47 @@ figcaption { font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; 
 @media (min-width: 1320px) {
   :root { --spine-x: calc((100% - var(--container)) / 2 - 44px); }
   .trunk .container { padding-left: 0; }
+}
+
+/* ---------- Phones & small tablets: readability and thumb reach ---------- */
+@media (max-width: 699px) {
+  /* Diagrams shrink with the screen, so their labels get a bigger drawing size to stay legible */
+  .illo text, .illo .illo-label { font-size: 15px; }
+  .illo .illo-label.strong, .ends text { font-size: 15px; }
+  .det text, .dev text { font-size: 13px; }
+  .dossier-map text { font-size: 13px; }
+  .permit-seal text { font-size: 9px; }
+  /* small mono labels: never below ~12px */
+  .eyebrow, .stat dt, .permit-issuer, .dossier-tab, .contact-rows dt, .office-kicker, .cred-kicker, .globe-hint, .hero-hint, .unit-num { font-size: .75rem; }
+  .stat dt { letter-spacing: .06em; }
+  /* full-width buttons are easier to hit with a thumb */
+  .hero-actions .btn { flex: 1 1 100%; }
+  .hero-lead { font-size: 1.05rem; }
+  /* display email: fits one line, arrow drops away */
+  .mega-mail { grid-template-columns: 1fr; margin-top: 48px; padding-top: 28px; }
+  .mega-mail .icon { display: none; }
+  .mega-addr { font-size: clamp(1.6rem, 8.6vw, 3.4rem); overflow-wrap: normal; white-space: nowrap; }
+  .contact-rows > div { grid-template-columns: 6rem 1fr; }
+  .vision p { padding-right: 0; padding-top: 1.6em; }
+  .vision-mark { font-size: 6rem; right: auto; left: -.04em; top: .05em; }
+  .unit-row { grid-template-columns: auto 1fr auto; gap: 12px; padding: 20px 4px; }
+  .tab-list [role="tab"] { padding: 0 16px; }
+  .spec th, .spec td { padding: 12px 0; }
+  .dialog-body, .dialog-head { padding-left: 16px; padding-right: 16px; }
+}
+/* Tablets: side-by-side layouts where there is room, before the full desktop layout at 900px */
+@media (min-width: 700px) and (max-width: 899px) {
+  :root { --sec-pad: 96px; }
+  .cred-cols { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .contact-grid { grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .about-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .hub-wrap { max-width: 520px; }
+  .permit-body { padding-right: 24px; padding-bottom: 104px; }
+}
+/* Very large displays: let the hero photo and ghost type keep up */
+@media (min-width: 1900px) {
+  :root { --header-h: 88px; }
+  .map iframe, .map { min-height: 26rem; }
 }
 
 /* ---------- 12. Respect "reduce motion" setting ---------- */
