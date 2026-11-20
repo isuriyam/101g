@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PREVIEW ONLY: stops Google indexing the site before the owner approves it.
+       DELETE this line on launch day (same as the home page). -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Projects | 101 Global</title>
+  <meta name="description" content="Selected projects delivered by 101 Global Company Limited across telecommunications, security, software, radio, banking, broadcasting, energy and aviation.">
+  <link rel="canonical" href="https://www.101g.com/projects.html">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0f1c">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects | 101 Global">
+  <meta property="og:description" content="Selected projects delivered by 101 Global for government and industry.">
+  <meta property="og:url" content="https://www.101g.com/projects.html">
+
+  <!-- Fonts: IBM Plex has a matching Thai version (IBM Plex Sans Thai) if we add Thai later -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css?v=202611191842">
+  <link rel="stylesheet" href="css/projects.css?v=202611191842">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="projects-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Icon sprite: each <symbol> is drawn once here and reused with <use href="#id"> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 10 12 4l9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/></symbol>
+      <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v5M12 12l-5.5 5.5M12 12l5.5 5.5"/></symbol>
+      <symbol id="i-radio" viewBox="0 0 24 24"><path d="M12 12v9M8 21h8"/><circle cx="12" cy="10" r="2"/><path d="M8.5 6.5a5 5 0 0 0 0 7M15.5 6.5a5 5 0 0 1 0 7M5.5 3.5a9 9 0 0 0 0 13M18.5 3.5a9 9 0 0 1 0 13"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m9 10-2 2 2 2M15 10l2 2-2 2M13 9l-2 6"/></symbol>
+      <symbol id="i-broadcast" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="m8 3 4 4 4-4M7 21h10"/></symbol>
+      <symbol id="i-plane" viewBox="0 0 24 24"><path d="M3 12h18M12 12V7M6 7h12M12 12l-3 7M12 12l3 7"/><circle cx="12" cy="12" r="1.5"/></symbol>
+      <symbol id="i-health" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/><path d="M9 11h6M12 8v6"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-energy" viewBox="0 0 24 24"><path d="M13 3 5 14h6l-1 7 8-11h-6l1-7Z"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+      <symbol id="i-badge" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="101 Global, home">
+        <img src="images/logo.svg" alt="101 Global" width="574" height="105">
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bar"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#solutions">Solutions</a></li>
+          <li><a href="index.html#units">Business Units</a></li>
+          <li><a href="projects.html" class="is-active" aria-current="page">Projects</a></li>
+          <li><a href="index.html#credentials">Credentials</a></li>
+          <li><a href="index.html#offices">Offices</a></li>
+          <li><a href="index.html#contact" class="btn btn-small">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="pj-hero grid-bg" aria-labelledby="pj-title">
+      <span class="ghost pj-ghost" aria-hidden="true">Archive</span>
+      <svg class="pj-rings" viewBox="-500 -500 1000 1000" aria-hidden="true" focusable="false">
+        <circle r="120"/><circle r="210"/><circle r="310"/><circle r="420"/>
+        <line x1="-500" y1="0" x2="500" y2="0"/><line x1="0" y1="-500" x2="0" y2="500"/>
+        <path class="pj-sweep" d="M0 0 L420 0 A420 420 0 0 0 364 -210 Z"/>
+        <circle class="pj-blip b1" cx="150" cy="-118" r="5"/><circle class="pj-blip b2" cx="-232" cy="64" r="5"/><circle class="pj-blip b3" cx="70" cy="262" r="5"/><circle class="pj-blip b4" cx="-96" cy="-318" r="5"/>
+      </svg>
+      <div class="container pj-hero-inner">
+        <p class="eyebrow"><a class="pj-back" href="index.html">101 Global</a> <span aria-hidden="true">/</span> Projects</p>
+        <h1 id="pj-title">Project <em>archive</em><i class="dot">.</i></h1>
+        <p class="hero-lead">Systems 101 Global has designed, supplied and integrated for government and industry. Search the files or filter by business unit.</p>
+      </div>
+    </section>
+
+    <!-- ===================== SEARCH + GRID ===================== -->
+    <section class="pj-section" aria-label="Project files">
+      <div class="container">
+
+        <!-- Search console. JS filters the cards below as you type; without JS every card simply stays visible. -->
+        <form class="pj-console" role="search" action="projects.html" method="get">
+          <label class="visually-hidden" for="pj-q">Search projects</label>
+          <span class="pj-prompt" aria-hidden="true">&gt;</span>
+          <input id="pj-q" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search"
+                 placeholder="Search projects, e.g. billing, TETRA, solar">
+          <kbd class="pj-kbd" aria-hidden="true">/</kbd>
+          <button type="button" class="pj-clear" hidden aria-label="Clear search"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+        </form>
+
+        <div class="pj-bar">
+          <div class="pj-chips" role="group" aria-label="Filter by business unit">
+            <button type="button" class="pj-chip" data-unit="all" aria-pressed="true">All<span class="pj-chip-n" aria-hidden="true"></span></button>
+            <button type="button" class="pj-chip" data-unit="telecom" aria-pressed="false">Telecom<span class="pj-chip-n" aria-hidden="true"></span></button>
+            <button type="button" class="pj-chip" data-unit="security" aria-pressed="false">Security<span class="pj-chip-n" aria-hidden="true"></span></button>
+            <button type="button" class="pj-chip" data-unit="it" aria-pressed="false">IT Software<span class="pj-chip-n" aria-hidden="true"></span></button>
+            <button type="button" class="pj-chip" data-unit="radio" aria-pressed="false">Radio<span class="pj-chip-n" aria-hidden="true"></span></button>
+            <button type="button" class="pj-chip" data-unit="banking" aria-pressed="false">Banking<span class="pj-chip-n" aria-hidden="true"></span></button>
+            <button type="button" class="pj-chip" data-unit="broadcast" aria-pressed="false">Broadcasting<span class="pj-chip-n" aria-hidden="true"></span></button>
+            <button type="button" class="pj-chip" data-unit="energy" aria-pressed="false">Energy<span class="pj-chip-n" aria-hidden="true"></span></button>
+            <button type="button" class="pj-chip" data-unit="aviation" aria-pressed="false">Aviation<span class="pj-chip-n" aria-hidden="true"></span></button>
+          </div>
+          <p class="pj-count" role="status" aria-live="polite"><b id="pj-shown">12</b> / 12 files</p>
+        </div>
+
+        <!-- ===== Project files. Copy one <li class="pj-card"> block to add a project. =====
+             PLACEHOLDERS: cards tagged "Sample" are stand-ins written from the solutions and business
+             units on the home page. Only the two tagged "Reference" are real project references.
+             Replace the samples with real projects before launch. -->
+        <ol class="pj-grid" id="pj-grid">
+          <li class="pj-card" data-unit="it" style="--i:0">
+            <article>
+              <div class="pj-media">
+                <img src="images/bu-4.webp" alt="" width="1280" height="720" loading="eager" decoding="async">
+                <span class="pj-file">Project file 01</span>
+                <span class="pj-status is-ref">Reference</span>
+                <span class="pj-num" aria-hidden="true">01</span>
+              </div>
+              <div class="pj-body">
+                <p class="pj-unit"><span>BU 04</span> <span data-hl>IT Software Solutions</span></p>
+                <h2 data-hl>Convergence billing solutions</h2>
+                <p class="pj-sum" data-hl>Convergent billing delivered in partnership with Convergys and Oracle.</p>
+                <dl class="pj-meta">
+                  <div><dt>Sector</dt><dd data-hl>Telecommunications</dd></div>
+                  <div><dt>Scope</dt><dd data-hl>Billing · System integration</dd></div>
+                  <div><dt>With</dt><dd data-hl>Convergys · Oracle</dd></div>
+                </dl>
+                <ul class="pj-tags" role="list"><li><button type="button" class="pj-tag" data-tag="Billing">Billing</button></li><li><button type="button" class="pj-tag" data-tag="Oracle">Oracle</button></li><li><button type="button" class="pj-tag" data-tag="Convergys">Convergys</button></li><li><button type="button" class="pj-tag" data-tag="Telecom operator">Telecom operator</button></li></ul>
+              </div>
+            </article>
+          </li>
+          <li class="pj-card" data-unit="telecom" style="--i:1">
+            <article>
+              <div class="pj-media">
+                <img src="images/bu-2.webp" alt="" width="1280" height="720" loading="eager" decoding="async">
+                <span class="pj-file">Project file 02</span>
+                <span class="pj-status is-ref">Reference</span>
+                <span class="pj-num" aria-hidden="true">02</span>
+              </div>
+              <div class="pj-body">
+                <p class="pj-unit"><span>BU 02</span> <span data-hl>Telecommunication Networking</span></p>
+                <h2 data-hl>Service Delivery Platform (SDP)</h2>
+                <p class="pj-sum" data-hl>A service delivery platform for TOT Public Company Limited.</p>
+                <dl class="pj-meta">
+                  <div><dt>Sector</dt><dd data-hl>Telecommunications</dd></div>
+                  <div><dt>Scope</dt><dd data-hl>Platform supply · Integration</dd></div>
+                  <div><dt>With</dt><dd data-hl>TOT Public Company Limited</dd></div>
+                </dl>
+                <ul class="pj-tags" role="list"><li><button type="button" class="pj-tag" data-tag="SDP">SDP</button></li><li><button type="button" class="pj-tag" data-tag="TOT">TOT</button></li><li><button type="button" class="pj-tag" data-tag="Platform">Platform</button></li><li><button type="button" class="pj-tag" data-tag="State enterprise">State enterprise</button></li></ul>
+              </div>
+            </article>
+          </li>
+          <li class="pj-card" data-unit="security" style="--i:2">
+            <article>
+              <div class="pj-media">
+                <img src="images/bu-8.webp" alt="" width="1280" height="720" loading="eager" decoding="async">
+                <span class="pj-file">Project file 03</span>
+                <span class="pj-status">Sample</span>
+                <span class="pj-num" aria-hidden="true">03</span>
+              </div>
+              <div class="pj-body">
+                <p class="pj-unit"><span>BU 08</span> <span data-hl>Security</span></p>
+                <h2 data-hl>AI video analytics for public safety</h2>
+                <p class="pj-sum" data-hl>Camera feeds analysed in real time for vehicles, motorcycles and number plates, with alerts sent to an operations room.</p>
+                <dl class="pj-meta">
+                  <div><dt>Sector</dt><dd data-hl>Government · Public safety</dd></div>
+                  <div><dt>Scope</dt><dd data-hl>Video analytics · ANPR</dd></div>
+                  
+                </dl>
+                <ul class="pj-tags" role="list"><li><button type="button" class="pj-tag" data-tag="Video analytics">Video analytics</button></li><li><button type="button" class="pj-tag" data-tag="ANPR">ANPR</button></li><li><button type="button" class="pj-tag" data-tag="Traffic enforcement">Traffic enforcement</button></li><li><button type="button" class="pj-tag" data-tag="CCTV">CCTV</button></li></ul>
+              </div>
+            </article>
+          </li>
+          <li class="pj-card" data-unit="security" style="--i:3">
+            <article>
+              <div class="pj-media">
+                <img src="images/isla-room.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+                <span class="pj-file">Project file 04</span>
+                <span class="pj-status">Sample</span>
+                <span class="pj-num" aria-hidden="true">04</span>
+              </div>
+              <div class="pj-body">
+                <p class="pj-unit"><span>BU 08</span> <span data-hl>Security</span></p>
+                <h2 data-hl>ISLA web malware isolation</h2>
+                <p class="pj-sum" data-hl>Isolated browsing so staff can open the web without malware ever reaching their own machines.</p>
+                <dl class="pj-meta">
+                  <div><dt>Sector</dt><dd data-hl>Government · Enterprise</dd></div>
+                  <div><dt>Scope</dt><dd data-hl>Cyber security · Rollout</dd></div>
+                  
+                </dl>
+                <ul class="pj-tags" role="list"><li><button type="button" class="pj-tag" data-tag="ISLA">ISLA</button></li><li><button type="button" class="pj-tag" data-tag="Malware isolation">Malware isolation</button></li><li><button type="button" class="pj-tag" data-tag="Secure browsing">Secure browsing</button></li><li><button type="button" class="pj-tag" data-tag="Cyber security">Cyber security</button></li></ul>
+              </div>
+            </article>
+          </li>
+          <li class="pj-card" data-unit="telecom" style="--i:4">
+            <article>
+              <div class="pj-media">
+                <img src="images/worldsip-aisle.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+                <span class="pj-file">Project file 05</span>
+                <span class="pj-status">Sample</span>
+                <span class="pj-num" aria-hidden="true">05</span>
+              </div>
+              <div class="pj-body">
+                <p class="pj-unit"><span>BU 02</span> <span data-hl>Telecommunication Networking</span></p>
+                <h2 data-hl>WorldSip communication platform</h2>
+                <p class="pj-sum" data-hl>A carrier-grade SIP platform connecting IP-PBX, softswitch and call-centre services on one network.</p>
+                <dl class="pj-meta">
+                  <div><dt>Sector</dt><dd data-hl>Telecommunications</dd></div>
+                  <div><dt>Scope</dt><dd data-hl>VoIP · Softswitch · SBC</dd></div>
+                  
+                </dl>
+                <ul class="pj-tags" role="list"><li><button type="button" class="pj-tag" data-tag="WorldSip">WorldSip</button></li><li><button type="button" class="pj-tag" data-tag="VoIP">VoIP</button></li><li><button type="button" class="pj-tag" data-tag="SIP">SIP</button></li><li><button type="button" class="pj-tag" data-tag="IP-PBX">IP-PBX</button></li><li><button type="button" class="pj-tag" data-tag="Call centre">Call centre</button></li></ul>
+              </div>
+            </article>
+          </li>
+          <li class="pj-card" data-unit="telecom" style="--i:5">
+            <article>
+              <div class="pj-media">
+                <img src="images/gsm-tower.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+                <span class="pj-file">Project file 06</span>
+                <span class="pj-status">Sample</span>
+                <span class="pj-num" aria-hidden="true">06</span>
+              </div>
+              <div class="pj-body">
+                <p class="pj-unit"><span>BU 02</span> <span data-hl>Telecommunication Networking</span></p>
+                <h2 data-hl>Private GSM network</h2>
+                <p class="pj-sum" data-hl>A self-contained mobile network giving a remote site its own coverage, numbers and tracked field units.</p>
+                <dl class="pj-meta">
+                  <div><dt>Sector</dt><dd data-hl>Industry · Remote sites</dd></div>
+                  <div><dt>Scope</dt><dd data-hl>Private mobile network</dd></div>
+                  
+                </dl>
+                <ul class="pj-tags" role="list"><li><button type="button" class="pj-tag" data-tag="GSM">GSM</button></li><li><button type="button" class="pj-tag" data-tag="Private network">Private network</button></li><li><button type="button" class="pj-tag" data-tag="Coverage">Coverage</button></li><li><button type="button" class="pj-tag" data-tag="Tracking">Tracking</button></li></ul>
+              </div>
+            </article>
+          </li>
+          <li class="pj-card" data-unit="radio" style="--i:6">
+            <article>
+              <div class="pj-media">
+                <img src="images/bu-3.webp" alt="" width="1280" height="720" loading="lazy" decoding="async">
+                <span class="pj-file">Project file 07</span>
+                <span class="pj-status">Sample</span>
+                <span class="pj-num" aria-hidden="true">07</span>
+              </div>
+              <div class="pj-body">
+                <p class="pj-unit"><span>BU 03</span> <span data-hl>Radio Communication</span></p>
+                <h2 data-hl>TETRA digital trunked radio</h2>
+                <p class="pj-sum" data-hl>Mission-critical radio with base stations, dispatcher consoles, voice logging and vehicle location.</p>
+                <dl class="pj-meta">
+                  <div><dt>Sector</dt><dd data-hl>Public safety · Transport</dd></div>
+                  <div><dt>Scope</dt><dd data-hl>TETRA · Network planning</dd></div>
+                  
+                </dl>
+                <ul class="pj-tags" role="list"><li><button type="button" class="pj-tag" data-tag="TETRA">TETRA</button></li><li><button type="button" class="pj-tag" data-tag="Radio">Radio</button></li><li><button type="button" class="pj-tag" data-tag="Dispatcher">Dispatcher</button></li><li><button type="button" class="pj-tag" data-tag="AVLS">AVLS</button></li><li><button type="button" class="pj-tag" data-tag="Mission critical">Mission critical</button></li></ul>
+              </div>
+            </article>
+          </li>
+          <li class="pj-card" data-unit="banking" style="--i:7">
+            <article>
+              <div class="pj-media">
+                <img src="images/bu-1.webp" alt="" width="1280" height="720" loading="lazy" decoding="async">
+                <span class="pj-file">Project file 08</span>
+                <span class="pj-status">Sample</span>
+                <span class="pj-num" aria-hidden="true">08</span>
+              </div>
+              <div class="pj-body">
+                <p class="pj-unit"><span>BU 01</span> <span data-hl>Banking &amp; Financial Solutions</span></p>
+                <h2 data-hl>Credit scoring &amp; loan origination</h2>
+                <p class="pj-sum" data-hl>Application and behaviour scorecards feeding a loan origination system and a decision strategy engine.</p>
+                <dl class="pj-meta">
+                  <div><dt>Sector</dt><dd data-hl>Banking · Finance</dd></div>
+                  <div><dt>Scope</dt><dd data-hl>Risk analytics · Software</dd></div>
+                  
+                </dl>
+                <ul class="pj-tags" role="list"><li><button type="button" class="pj-tag" data-tag="Credit scoring">Credit scoring</button></li><li><button type="button" class="pj-tag" data-tag="LOS">LOS</button></li><li><button type="button" class="pj-tag" data-tag="Risk">Risk</button></li><li><button type="button" class="pj-tag" data-tag="Core banking">Core banking</button></li></ul>
+              </div>
+            </article>
+          </li>
+          <li class="pj-card" data-unit="broadcast" style="--i:8">
+            <article>
+              <div class="pj-media">
+                <img src="images/bu-5.webp" alt="" width="1280" height="720" loading="lazy" decoding="async">
+                <span class="pj-file">Project file 09</span>
+                <span class="pj-status">Sample</span>
+                <span class="pj-num" aria-hidden="true">09</span>
+              </div>
+              <div class="pj-body">
+                <p class="pj-unit"><span>BU 05</span> <span data-hl>Broadcasting</span></p>
+                <h2 data-hl>DVB-T2 digital terrestrial broadcast</h2>
+                <p class="pj-sum" data-hl>The full broadcast chain from ingest and media asset management to DVB-T2 exciters and transmitters.</p>
+                <dl class="pj-meta">
+                  <div><dt>Sector</dt><dd data-hl>Broadcasting · Media</dd></div>
+                  <div><dt>Scope</dt><dd data-hl>Digital TV · Transmission</dd></div>
+                  
+                </dl>
+                <ul class="pj-tags" role="list"><li><button type="button" class="pj-tag" data-tag="DVB-T2">DVB-T2</button></li><li><button type="button" class="pj-tag" data-tag="Digital TV">Digital TV</button></li><li><button type="button" class="pj-tag" data-tag="Transmitter">Transmitter</button></li><li><button type="button" class="pj-tag" data-tag="Media asset management">Media asset management</button></li></ul>
+              </div>
+            </article>
+          </li>
+          <li class="pj-card" data-unit="it" style="--i:9">
+            <article>
+              <div class="pj-media">
+                <img src="images/hero.webp" alt="" width="1280" height="720" loading="lazy" decoding="async">
+                <span class="pj-file">Project file 10</span>
+                <span class="pj-status">Sample</span>
+                <span class="pj-num" aria-hidden="true">10</span>
+              </div>
+              <div class="pj-body">
+                <p class="pj-unit"><span>BU 04</span> <span data-hl>IT Software Solutions</span></p>
+                <h2 data-hl>OSS network inventory management</h2>
+                <p class="pj-sum" data-hl>One inventory of network infrastructure across IP, MPLS, SDH and fibre, with workflow and real-time asset value.</p>
+                <dl class="pj-meta">
+                  <div><dt>Sector</dt><dd data-hl>Telecommunications</dd></div>
+                  <div><dt>Scope</dt><dd data-hl>OSS · Inventory · Workflow</dd></div>
+                  
+                </dl>
+                <ul class="pj-tags" role="list"><li><button type="button" class="pj-tag" data-tag="OSS">OSS</button></li><li><button type="button" class="pj-tag" data-tag="Inventory">Inventory</button></li><li><button type="button" class="pj-tag" data-tag="MPLS">MPLS</button></li><li><button type="button" class="pj-tag" data-tag="Fibre">Fibre</button></li><li><button type="button" class="pj-tag" data-tag="Workflow">Workflow</button></li></ul>
+              </div>
+            </article>
+          </li>
+          <li class="pj-card" data-unit="energy" style="--i:10">
+            <article>
+              <div class="pj-media">
+                <img src="images/bu-9.webp" alt="" width="1280" height="720" loading="lazy" decoding="async">
+                <span class="pj-file">Project file 11</span>
+                <span class="pj-status">Sample</span>
+                <span class="pj-num" aria-hidden="true">11</span>
+              </div>
+              <div class="pj-body">
+                <p class="pj-unit"><span>BU 09</span> <span data-hl>Energy</span></p>
+                <h2 data-hl>Solar &amp; battery storage</h2>
+                <p class="pj-sum" data-hl>Solar generation paired with battery storage, inverters and EV charging for a commercial site.</p>
+                <dl class="pj-meta">
+                  <div><dt>Sector</dt><dd data-hl>Energy · Commercial</dd></div>
+                  <div><dt>Scope</dt><dd data-hl>Renewables · Storage</dd></div>
+                  
+                </dl>
+                <ul class="pj-tags" role="list"><li><button type="button" class="pj-tag" data-tag="Solar">Solar</button></li><li><button type="button" class="pj-tag" data-tag="Battery storage">Battery storage</button></li><li><button type="button" class="pj-tag" data-tag="Inverter">Inverter</button></li><li><button type="button" class="pj-tag" data-tag="EV charger">EV charger</button></li></ul>
+              </div>
+            </article>
+          </li>
+          <li class="pj-card" data-unit="aviation" style="--i:11">
+            <article>
+              <div class="pj-media">
+                <img src="images/bu-6.webp" alt="" width="1280" height="720" loading="lazy" decoding="async">
+                <span class="pj-file">Project file 12</span>
+                <span class="pj-status">Sample</span>
+                <span class="pj-num" aria-hidden="true">12</span>
+              </div>
+              <div class="pj-body">
+                <p class="pj-unit"><span>BU 06</span> <span data-hl>Aviation Business</span></p>
+                <h2 data-hl>Aerial survey by gyroplane</h2>
+                <p class="pj-sum" data-hl>Low-altitude survey flights with the AutoGyro Cavalon, supported by maintenance and flight training.</p>
+                <dl class="pj-meta">
+                  <div><dt>Sector</dt><dd data-hl>Survey · Aviation</dd></div>
+                  <div><dt>Scope</dt><dd data-hl>Flying services · Training</dd></div>
+                  <div><dt>With</dt><dd data-hl>AutoGyro GmbH</dd></div>
+                </dl>
+                <ul class="pj-tags" role="list"><li><button type="button" class="pj-tag" data-tag="Cavalon">Cavalon</button></li><li><button type="button" class="pj-tag" data-tag="AutoGyro">AutoGyro</button></li><li><button type="button" class="pj-tag" data-tag="Aerial survey">Aerial survey</button></li><li><button type="button" class="pj-tag" data-tag="Flight training">Flight training</button></li></ul>
+              </div>
+            </article>
+          </li>
+        </ol>
+
+        <div class="pj-empty" id="pj-empty" hidden>
+          <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52"/><circle cx="60" cy="60" r="34"/><circle cx="60" cy="60" r="16"/><path d="M60 8v104M8 60h104"/></svg>
+          <h2>No signal</h2>
+          <p>No project files match <q id="pj-empty-q"></q>.</p>
+          <button type="button" class="btn btn-primary" id="pj-reset">Show all projects</button>
+        </div>
+
+        <p class="pj-note">Files marked <span class="pj-status">Sample</span> are placeholder entries while the full project archive is being compiled.</p>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section-dark grid-bg" aria-labelledby="pj-contact-title">
+      <div class="container">
+        <p class="eyebrow">Next file</p>
+        <h2 id="pj-contact-title">Have a project <em>in mind?</em></h2>
+        <a href="mailto:support@101g.com" class="mega-mail"><span class="mega-label">Write to us</span><span class="mega-addr">support<span>@</span>101g.com</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo logo-light" aria-label="101 Global, home">
+        <img src="images/logo.svg" alt="101 Global" width="574" height="105">
+      </a>
+      <ul class="footer-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="https://sites.google.com/a/101g.com/intranet/">Intranet</a></li>
+        <li><a href="https://sites.google.com/a/101g.com/jobs/">Jobs</a></li>
+        <li><a href="mailto:support@101g.com">support@101g.com</a></li>
+      </ul>
+      <p class="copyright">© <span id="year">2026</span> 101 Global Company Limited. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/projects.js?v=202611191842" defer></script>
+</body>
+</html>

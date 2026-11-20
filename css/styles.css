@@ -539,6 +539,7 @@ figcaption { font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; 
 .dm-node { fill: var(--paper); stroke: var(--accent); stroke-width: 1.5; }
 .dossier .sig { stroke: var(--accent); filter: none; }
 .dossier-map text { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; fill: var(--muted); }
+.pj-all { margin-top: 22px; } /* "View all projects" link under the project files */
 
 /* Licences drawn as permit documents: dark stub, perforation, cut corner, hatched paper, stamped seal */
 .permits { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
