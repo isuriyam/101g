@@ -362,7 +362,11 @@ document.getElementById('year').textContent = new Date().getFullYear();
   // hub drawn last so it sits on top of the spokes
   const hub = el('g', { class: 'hub' }, svg);
   el('circle', { class: 'hub-ring', r: HUB }, hub);
-  el('circle', { r: HUB }, hub);
+  el('circle', { class: 'hub-globe', r: HUB }, hub);
+  // globe lines: two meridians, the equator and two curved parallels
+  el('ellipse', { class: 'hub-grid', rx: HUB * 0.42, ry: HUB }, hub);
+  el('ellipse', { class: 'hub-grid', rx: HUB * 0.8, ry: HUB }, hub);
+  el('path', { class: 'hub-grid', d: `M${-HUB} 0 H${HUB} M0 ${-HUB} V${HUB} M-46 -32 Q0 -20 46 -32 M-46 32 Q0 20 46 32` }, hub);
   const t = el('text', { x: 0, y: 9, 'text-anchor': 'middle' }, hub);
   t.textContent = '101G';
 
